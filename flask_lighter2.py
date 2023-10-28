@@ -112,7 +112,7 @@ def get_percent():
     #input_sentence = searchWord
     
     
-    resultjson = {'resultNum': int((whole_gaslighting_prob)*100),'doubtText1':top2_gaslighting_texts[0],'doubtText2':top2_gaslighting_texts[1]}
+    resultjson = {'resultNum': int((whole_gaslighting_prob)*100),'doubtText1':top2_gaslighting_texts[0],'doubtText2':top2_gaslighting_texts[1],'doubtText3':top2_gaslighting_texts[2],'doubtText4':top2_gaslighting_texts[3],'doubtText5':top2_gaslighting_texts[4]}
     return jsonify(resultjson)
     #return jsonify(param)
     #return 'Hello, World!'
