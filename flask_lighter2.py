@@ -40,7 +40,7 @@ def get_percent():
     tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased')
 
     model = BertForSequenceClassification.from_pretrained('bert-base-multilingual-cased', num_labels=2)
-    model.load_state_dict(torch.load('lighter_multibi_finetuned3.pth', map_location=torch.device('cpu')), strict=False)
+    model.load_state_dict(torch.load('lighter_multibi_finetuned4.pth', map_location=torch.device('cpu')), strict=False)
     optimizer = AdamW(model.parameters(), lr=2e-5, eps=1e-8)
         
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
