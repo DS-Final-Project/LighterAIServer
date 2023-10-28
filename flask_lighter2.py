@@ -91,7 +91,7 @@ def get_percent():
             gaslighting_scores.append((text, prob))
 
         # 상위 2개 가스라이팅 확률을 가진 문장 선택
-        sorted_scores = sorted(gaslighting_scores, key=lambda x: x[1], reverse=True)[:2]
+        sorted_scores = sorted(gaslighting_scores, key=lambda x: x[1], reverse=True)[:5]
         top2_texts = [item[0] for item in sorted_scores]
 
         return whole_prob, top2_texts
@@ -104,7 +104,7 @@ def get_percent():
     whole_gaslighting_prob, top2_gaslighting_texts = evaluate_and_extract(searchWord_Img)
     
     print(f"전체 대화의 가스라이팅 확률: {whole_gaslighting_prob:.2f}")
-    print(f"가스라이팅 정도가 가장 심한 2개의 문장: {top2_gaslighting_texts}")
+    print(f"가스라이팅 정도가 가장 심한 5개의 문장: {top2_gaslighting_texts}")
 
 
 
