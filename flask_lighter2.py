@@ -110,7 +110,8 @@ def get_percent():
 
     # 특정 문장 입력
     #input_sentence = searchWord
-    
+    if(len(top2_gaslighting_texts)<5) :
+        top2_gaslighting_texts = top2_gaslighting_texts + [''] * (5-len(top2_gaslighting_texts))
     
     resultjson = {'resultNum': int((whole_gaslighting_prob)*100),'doubtText1':top2_gaslighting_texts[0],'doubtText2':top2_gaslighting_texts[1],'doubtText3':top2_gaslighting_texts[2],'doubtText4':top2_gaslighting_texts[3],'doubtText5':top2_gaslighting_texts[4]}
     return jsonify(resultjson)
